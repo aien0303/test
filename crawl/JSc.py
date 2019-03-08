@@ -5,56 +5,6 @@ import re
 import datetime
 import json
 
-# cookies = {
-#     '_ga': 'GA1.3.1928576083.1551859778',
-#     '_gid': 'GA1.3.220778838.1551859778',
-#     '_gcl_au': '1.1.2136873236.1551859778',
-#     '_fbp': 'fb.2.1551859778447.692233054',
-#     'MyCssSkin': 'skin_list',
-#     'ASPSESSIONIDAGABQDTA': 'CAMBIBCAEJOKKOCBFMNEEIDO',
-# }
-
-# headers = {
-#     'Origin': 'https://www.newamazing.com.tw',
-#     'Accept-Encoding': 'gzip, deflate, br',
-#     'Accept-Language': 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
-#     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
-#     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-#     'Accept': '*/*',
-#     'Referer': 'https://www.newamazing.com.tw/EW/GO/GroupList.asp',
-#     'X-Requested-With': 'XMLHttpRequest',
-#     'Connection': 'keep-alive',
-#     'DNT': '1',
-# }
-# page=2
-# today=str(datetime.date.today()).replace("-","/")
-
-# data = {
-#   'displayType': 'G',
-#   'subCd': '',
-#   'orderCd': '1',
-#   'pageALL': '1',
-#   'pageGO': '1',
-#   'pagePGO': '1',
-#   'waitData': 'false',
-#   'waitPage': 'false',
-#   'mGrupCd': '',
-#   'SrcCls': '',
-#   'tabList': '',
-#   'regmCd': '',
-#   'regsCd': '',
-#   'beginDt': today,
-#   'endDt': today,
-#   'portCd': '',
-#   'tdays': '',
-#   'bjt': '',
-#   'carr': '',
-#   'allowJoin': '1',
-#   'allowWait': '1',
-#   'ikeyword': ''
-# }
-
-import requests
 
 cookies = {
     '_ga': 'GA1.3.1928576083.1551859778',
