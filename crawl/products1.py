@@ -72,13 +72,6 @@ for page in range(1,3):
     if TDays=='天數' or TDate=='出發日期' or TPrice=='售價' or TName=='':
         pass
     else:
-      # print(TDays)
-      # print(TName)
-      # print(TDate)
-      # print(TPrice)
-      # print(TAvailable)
-      # print(TTotal)
-      # print(characteristics)
       
       # 存入資料庫
       Crawl.DBI(TDays,TName,TDate,TPrice,TAvailable,TTotal,travelagency,characteristics)

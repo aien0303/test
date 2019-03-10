@@ -36,14 +36,6 @@ for quan in range(0,quan):
     dlist=Crawl.JsonLoad(items,'Flights')
     # 特色
     characteristics=Crawl.Characteristics(dlist)
-    
-    # print(TDays)
-    # print(TName)
-    # print(TDate)
-    # print(TPrice)
-    # print(TAvailable)
-    # print(TTotal)
-    # print(characteristics)
 
     # 存入資料庫
     Crawl.DBI(TDays,TName,TDate,TPrice,TAvailable,TTotal,travelagency,characteristics)

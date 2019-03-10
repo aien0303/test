@@ -81,8 +81,9 @@ def DBI(days,name,date,price,available,total,travelagency,characteristics):
         travelagency,
         characteristics,
     ]
+    print(target)
+
     with db.cursor() as cursor:
         sql="""INSERT IGNORE INTO products(days,name,date,price,available,total,travelagency,characteristics) values("""+'%s'+',%s'*(len(target)-1)+""")"""
         cursor.execute(sql,target)
         db.commit()
-    return print('存入資料庫')
