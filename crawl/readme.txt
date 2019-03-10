@@ -10,10 +10,10 @@ DB=test
 
 table=product
 # Pid PK
-# days int '天'去''(乾淨)
+# days int '天'改''(乾淨)
 # name 改成非Uni
 # date date格式 '/'改'-'(格式需求)
-# price int ','去''
+# price int ','改''
 # available int(乾淨)
 # total int
 # travelagency int
@@ -29,10 +29,10 @@ table=travelagency
 # 更改
 
 抓取兩家旅行社兩頁以上的商品資料
-# 成功
+# 成功，products1.py
 
 多抓取步驟3. 以外，而有出現在Tripesso網站上的內容
-# 成功
+# 成功，航班特色
 
 使用requests
 # 成功

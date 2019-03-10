@@ -34,7 +34,6 @@ def JsonLoad(items,ObName):
     return dlist
 
 # 特色
-# 0000-1159早回早去 1600-2359晚回晚去
 def Characteristics(dlist):
     # 擷取
     global ArrTm,DepTm,characteristics
@@ -49,7 +48,8 @@ def Characteristics(dlist):
             pass
         else:
             DepTm=int(dlist[-1]['DepTm'].replace(':',''))
-        # 判斷
+            
+        # 判斷0000-1159早回早去 1600-2359晚回晚去
         characteristics=''
         if len(dlist)<2:
             if len(dlist)==2:
@@ -69,7 +69,7 @@ def Characteristics(dlist):
     return characteristics
 
 # 存入資料庫
-def DBI(days,name,date,price,available,total,travelagency,characteristics=''):
+def DBI(days,name,date,price,available,total,travelagency,characteristics):
     db=pymysql.connect("localhost","root","root",'test')
     target=[
         days,
