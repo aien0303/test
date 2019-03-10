@@ -34,10 +34,8 @@ for quan in range(0,quan):
     items=Crawl.crawl('http://www.orangetour.com.tw/EW/Services/SearchFlight.asp?prodCd='+prodCd+'&sacctNo=&flightType=1','p')[0]
     # Json
     dlist=Crawl.JsonLoad(items,'Flights')
-    # 特色擷取
-    ArrTm,DepTm=Crawl.Capture(dlist)
-    # 特色判斷
-    characteristics=Crawl.Characteristics(dlist,ArrTm,DepTm)
+    # 特色
+    characteristics=Crawl.Characteristics(dlist)
     
     # print(TDays)
     # print(TName)

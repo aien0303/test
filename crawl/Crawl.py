@@ -33,9 +33,11 @@ def JsonLoad(items,ObName):
     dlist=data[ObName]
     return dlist
 
-# 特色擷取
-def Capture(dlist):
-    global ArrTm,DepTm
+# 特色
+# 0000-1159早回早去 1600-2359晚回晚去
+def Characteristics(dlist):
+    # 擷取
+    global ArrTm,DepTm,characteristics
     if dlist==[]:
         pass
     else:
@@ -47,26 +49,23 @@ def Capture(dlist):
             pass
         else:
             DepTm=int(dlist[-1]['DepTm'].replace(':',''))
-    return ArrTm,DepTm
-# 特色判斷
-# 0000-1159早回早去 1600-2359晚回晚去
-def Characteristics(dlist,ArrTm,DepTm):
-    characteristics=''
-    if len(dlist)<2:
-        if len(dlist)==2:
-            characteristics+='、直飛'
-    if ArrTm!='':
-        if ArrTm<1159:
-            characteristics+='、早去'
-        elif ArrTm>1600:
-            characteristics+='、晚去'
-    if DepTm!='':
-        if DepTm<1159:
-            characteristics+='、早回'
-        elif DepTm>1600:
-            characteristics+='、晚回'
-    if characteristics!='':
-        characteristics=characteristics[1:]
+        # 判斷
+        characteristics=''
+        if len(dlist)<2:
+            if len(dlist)==2:
+                characteristics+='、直飛'
+        if ArrTm!='':
+            if ArrTm<1159:
+                characteristics+='、早去'
+            elif ArrTm>1600:
+                characteristics+='、晚去'
+        if DepTm!='':
+            if DepTm<1159:
+                characteristics+='、早回'
+            elif DepTm>1600:
+                characteristics+='、晚回'
+        if characteristics!='':
+            characteristics=characteristics[1:]
     return characteristics
 
 # 存入資料庫

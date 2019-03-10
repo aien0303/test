@@ -27,7 +27,7 @@ data={
   'allowWait': '1',
   'ikeyword': ''
 }
-
+# 月份+6
 def monthdelta(date, delta):
     m, y = (date.month+delta) % 12, date.year + ((date.month)+delta-1) // 12
     if not m: m = 12
@@ -66,10 +66,9 @@ for page in range(1,3):
     items=Crawl.crawl('https://www.newamazing.com.tw/EW/Services/SearchFlight.asp?prodCd='+prodCd+'&sacctNo=&flightType=1','p')[0]  
     # Json
     dlist2=Crawl.JsonLoad(items,'Flights')
-    # 特色擷取
-    ArrTm,DepTm=Crawl.Capture(dlist2)
-    # 特色判斷
-    characteristics=Crawl.Characteristics(dlist2,ArrTm,DepTm)
+    # 特色
+    characteristics=Crawl.Characteristics(dlist2)
+
     if TDays=='天數' or TDate=='出發日期' or TPrice=='售價' or TName=='':
         pass
     else:
